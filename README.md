@@ -73,3 +73,13 @@ Repo: FUTURE_FS_02
 
 ## 👤 Author
 Jay Prakash
+
+## 📸 Screenshots
+
+### Login
+![Login](./login.png)
+
+### Dashboard
+![Dashboard](./dashboard.png)
+
+
