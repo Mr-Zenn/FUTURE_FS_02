@@ -16,7 +16,9 @@ const app = express();
   - In production, you can replace "*" with your Vercel URL
 */
 app.use(cors({
-  origin: "*",
+  origin: "https://future-fs-02-xi-cyan.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 app.use(express.json());

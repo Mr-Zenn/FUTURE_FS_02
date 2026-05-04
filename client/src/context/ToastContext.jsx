@@ -32,4 +32,8 @@ export function ToastProvider({ children }) {
   );
 }
 
-export const useToast = () => useContext(ToastContext);
+export const useToast = () => {
+  const ctx = useContext(ToastContext);
+  // Fallback: if used outside provider (e.g. during SSR or test), return a no-op
+  return ctx ?? (() => {});
+};
