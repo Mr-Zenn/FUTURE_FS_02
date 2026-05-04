@@ -28,7 +28,8 @@ export const updateLead = async (req, res) => {
     const lead = await Lead.findOne(query);
     if (!lead) return res.status(404).json({ message: "Lead not found" });
 
-    Object.assign(lead, req.body);
+    const { name, email, phone, notes, status } = req.body;
+    Object.assign(lead, { name, email, phone, notes, status });
     await lead.save();
     res.json(lead);
   } catch (err) {
